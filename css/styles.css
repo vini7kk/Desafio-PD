@@ -1,158 +1,238 @@
-            /*Cabeçalho configurações*/
-header {
-    font-size: 100%;
-    background-color: #cc5434; 
-    height: 100px; 
-}
+                       html {
+                scroll-behavior: smooth;
+            }
+            
+                                                         /*Cabeçalho estilização*/
+            header {
+                font-size: 100%;
+                background-color: #cc5434; 
+                height: 100px; 
+            }
+            
+            .cabecalho {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                height: 100%; 
+                background-color: #cc5434; 
+                background-size: 100%;
+                flex-wrap: wrap;
+            }
+            
+            
+            .cabecalho-imagem {
+                max-width: 100px;
+                height: auto; 
+            }
+            
+            .cabecalho-menu {
+                display: flex;
+                gap: 32px;
+            }
+            
+            a:hover {
+                color: #d4c7c2;
+            }
+            
+            .cabecalho-item-menu {
+                text-decoration: none;
+                font-family: 'Sarala';
+                color: #f3e3d3;   
+                font-weight: 700;
+                font-size: 18px; 
+            }
+            
+                                              /* Media query do cabeçario para dispositivos menores */
+            @media  (max-width: 768px) {
+                .cabecalho {
+                    flex-direction: row; /* Empilha itens verticalmente em dispositivos menores */
+                    height: auto; /* Permitir que o cabeçalho cresça conforme necessário */
+                    max-width: 100%;
+                    background-size: 100%;    
+                }
+                
+                .cabecalho-menu {
+                      gap: 16px; /* espaçamento entre os itens do menu */
+                }
 
-.cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%; 
-    background-color: #cc5434; 
-    flex-wrap: wrap;
-}
+                
+            }
 
-
-.cabecalho-imagem {
-    max-width: 100px;
-    height: auto; 
-}
-
-.cabecalho-menu {
-    display: flex;
-    gap: 32px;
-}
-
-/* Estilos para links no cabeçalho */
-a:hover {
-    color: #d4c7c2;
-}
-
-.cabecalho-item-menu {
-    text-decoration: none;
-    font-family: 'Sarala';
-    color: #f3e3d3;   
-    font-weight: 700;
-    font-size: 18px; 
-}
-
-/* Media query para dispositivos menores */
-@media  (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column; /* Empilha itens verticalmente em dispositivos menores */
-        height: auto; /* Permitir que o cabeçalho cresça conforme necessário */
-    }
-    
-    .cabecalho-menu {
-        flex-direction: column; /* Empilha os itens do menu verticalmente */
-        gap: 16px; /* Reduz o espaçamento entre os itens do menu */
-    }
-    
-}
-
-
+          
+            
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+            
+                                                                 /* Conteúdo */
+            .conteudo {
+                font-size: 100%;
+                background: linear-gradient(#f3e3d3, #da9970);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+        }
+            
+                                                              /* Texto e Botão */
+            
+            
+            .Primeira-parte h1 {
+                font-size: 5em; /* Reduzindo o tamanho da fonte */
+                margin-bottom: 10px; /* Reduzindo a margem inferior */
+                font-family: "Inter", sans-serif;
+                font-weight: 900;
+                color: #3c141c;
+                padding-top: auto;
+        }
+            
+            .Primeira-parte .Botao {
+                display: inline-block;
+                background-color: #983c24;
+                color: #f3e3d3;
+                padding: 10px 15px; 
+                font-size: 1em; 
+                font-weight: bold;
+                font-family: 'Sarala';
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+                font-size: 1rem;
+                margin-top: 10px; 
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                
+        }
 
-/* Conteúdo */
-.conteudo {
-    font-size: 100%;
-    background: linear-gradient(#f3e3d3, #da9970);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
+                                                             /*Animação do Botão*/
 
-/* Texto e Botão */
-.Primeira-parte {
-    width: calc(50% - 20px)%;
-    padding: 20px;
-    text-align: left;
-    padding: 10em;
-}
+            .Primeira-parte .Botao:hover {
+                background-color: #c94f31;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        }
 
-.Primeira-parte h1 {
-    font-size: 400%; /* Reduzindo o tamanho da fonte */
-    margin-bottom: 10px; /* Reduzindo a margem inferior */
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
-    color: #3c141c;
-    padding-top: auto;
-}
-
-.Primeira-parte .Botao {
-    display: inline-block;
-    background-color: #983c24;
-    color: white;
-    padding: 10px 15px; /* Reduzindo o padding */
-    font-size: 1em; /* Reduzindo o tamanho da fonte */
-    font-family: 'Sarala';
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 10px; /* Reduzindo a margem superior */
-}
-
-.Primeira-parte .Botao:hover {
-    background-color: #c94f31;
-}
-
-/* Carrossel */
-.carrossel {
-    width: calc(50% - 20px);
-    max-width: 100%;
-    height: auto;
-    max-height: 400px;
-    border-radius: 50px;
-    overflow: hidden;
-    aspect-ratio: 1/1;
-}
-
-.moldura {
-    width: 25%;
-    height: auto;
-}
-
-.container {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 400%;
-}
-
-
-
-.container img {
-    width: 100%;
-    height: 100%;
-    
-}
-
-/* Media Query para Computadores */
-@media screen and (min-width: 768px) {
-    .carrossel {
-        width: 400px; /* Define o tamanho do carrossel para 400px por 400px */
-        max-height: 400px; /* Mantém a altura máxima */
-    }
-}
+            /* Carrossel */
+            .carrossel {
+                max-width: 100%;
+                height: auto;
+                max-height: 400px; /*400px para funcionar corretamente*/
+                border-radius: 50px;
+                overflow: hidden;
+                aspect-ratio: 1/1;
+            
+        }
+            
+            .moldura {
+                width: 25%;
+                height: auto;
+        }
+            
+            .container {
+                display: flex;
+                transition: transform 0.5s ease;
+                width: 400%;
+        }
+        
+            
+            .container img {
+                width: 100%;
+                height: 100%;
+                
+        }
 
 
+            
+                                                         /* Media Query para Computadores */
+            @media screen and (min-width: 768px) {
+                
+                .carrossel {
+                    width: 100%;
+                    height: 100%;
 
+                }
+
+                .Primeira-parte h1 {
+                    font-size: 4em; 
+                    margin-bottom: 10px; 
+                    font-family: "Inter", sans-serif;
+                    font-weight: 900;
+                    color: #3c141c;
+                    padding-top: auto;
+                }
+
+
+        }
+           
+
+
+
+                                                     /* Media query para dispositivos menores */
+            
+            @media  (max-width: 768px) {
+
+            .carrossel {
+                width: 0%; 
+                max-height:0%; 
+            }
+
+                        
+            .conteudo {
+                width: 100%;
+                max-height: auto;
+                padding-top: 7rem;
+                padding-bottom: 7rem;
+            }
+            .Primeira-parte  {
+                font-size: 0.5rem;   
+            }
+                    
+            .Primeira-parte .Botao {
+                width: 30%;
+                        
+            }
+
+            .conteudo {
+                font-size: 80%;
+                background: linear-gradient(#f3e3d3, #da9970);
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                display: flex;
+                width: auto;
+            }
+
+            .Primeira-parte h1 {
+                font-size: 5em;
+                font-family: "Inter", sans-serif;
+                font-weight: 900;
+                color: #3c141c;
+                padding-top: 10px;
+
+            }
+
+        }
+        
+            
+            
+            
+            
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-        /* Conteudo 2 da página*/
-
+            
+            
+                                                         /* Conteudo 2 da página*/
+            
         .quem-somos {
             background-color: #8a392a;
             overflow: hidden;
             text-align: center; /* Alinha todo o conteúdo ao centro */
-            padding-top: 110px; /* Adiciona espaço entre o topo da seção e o conteúdo */
+            padding-top: 5em; /* Adiciona espaço entre o topo da seção e o conteúdo */
         }
-        
+                            
         .quem-somos h3 {
             font-family: 'inter', sans-serif;
             font-size: 3em;
@@ -161,74 +241,270 @@ a:hover {
             margin-bottom: 10px; /* Pequeno espaço abaixo do título */
             text-shadow: 0 0 10px #271002;
         }
-        
+                            
         .quem-somos p {
             font-family: 'inter', sans-serif;
             font-size: 1.5em;
             color: #f3e3d3;
             line-height: 2;
             margin-bottom: 15px;
-            padding-top: 20px; /* Espaçamento acima do texto */
-            
+            padding-top: 5em; /* Espaçamento acima do texto */
+                                
         }
-        
+                            
         .gif {
             float: left;
             margin-right: 20px;
             border-radius: 100px;
             padding: 20px;
             padding-bottom: 50px;
-}
-        
+        }
+                    
+                                                      /* Media query para dispositivos menores */
+
+                    @media  (max-width: 768px) {
+
+        .gif {
+            width: 90%; 
+            max-height:90%; 
+            }
+                        
+        .quem-somos p {
+            padding: 10px;
+            font-size: 1.2rem;
+                            
+            }
+        }
+
+                            
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-            /*RODAPÉ DA PAGINA */
-            footer {
-                background-color: #380d15;
-                color: #f3e3d3;
-                padding: 20px;
-                text-align: center;
-                display: flex;
-                justify-content: space-between; /* Distribui os elementos igualmente no espaço disponível */
-                align-items: center; /* Centraliza verticalmente os elementos */
-            }
-            
-            .logo {
-                max-width: 70px;
-                height: auto;
-                order: 1; /* Define a ordem dos elementos */
-            }
-            
-            .contato {
-                margin-left: auto;
-                order: 3; /* Define a ordem dos elementos */
-            }
-            
-            .contato img {
-                width: 90px;
-                height: auto;
-            }
-            
-            .contato a {
-                color: #fff;
-                margin: 0 10px;
-                text-decoration: none;
-            }
-            
-            .contato a:hover {
-                text-decoration: underline;
-            }
-            
-            .copy {
-                font-family: 'Sarala';
-                margin-top: 10px;
-                text-align: center;
-                order: 2; /* Define a ordem dos elementos */
-            }
-            
+                    
+                    
+                                                             /*RODAPÉ DA PAGINA */
+        footer {
+            background-color: #380d15;                       
+            color: #f3e3d3;                      
+            text-align: center;
+            display: flex;
+            justify-content: space-between; /* Distribui os elementos igualmente no espaço disponível */
+            align-items: center; /* Centraliza verticalmente os elementos */                        
+        }
+                                
+        .logo-rodape {
+            max-width: 70px;
+            height: auto;                       
+            order: 1; /* Define a ordem dos elementos */                        
+        }                                           
+                                
+        .contato {
+            margin-left: auto;
+            order: 3; /* Define a ordem dos elementos */
+        }
+                                
+        .contato img {
+            width: 10%;
+            height: auto;
+        }
+                                
+                            
+                                
+        .copy {
+            font-family: 'Sarala';
+            margin-top: 10px;
+            text-align: center;
+            color: #704a51;
+            padding-bottom: 1rem;
+            font-size: 0.8rem;
+            text-align: center;                      
+        }
+                                
         .contatenos {
             font-family: 'inter' , sans-serif;
             padding: 10px;
         }
+                     
+        
+
+                                                    /* Media query para dispositivos menores */
+        @media  (max-width: 768px) {
+        footer {
+            background-color: #380d15;
+            color: #f3e3d3;
+            padding: 0px;
+                
+        }
             
+        .logo-rodape {
+            max-width: 40%;
+            height: auto;
+            align-content: left;
+        }
+            
+
+        .contato img {
+            width: 20%;
+            height: auto;
+        }
+            
+            .contatenos {
+            font-family: 'inter' , sans-serif;
+            padding: auto;
+        }
+        .footer-img {
+            width: 100%;
+            padding: 0rem;
+        }
+        .copy {
+            font-family: 'Sarala';
+            font-size: 0.5rem;
+            margin-top: 10px;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        }
+
+        
+            
+            
+            
+            
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+            
+            
+                    /* Conteudo 2 da página*/
+            
+        .quem-somos {
+            background-color: #8a392a;
+            overflow: hidden;
+            text-align: center; /* Alinha todo o conteúdo ao centro */
+            padding-top: 5em; /* Adiciona espaço entre o topo da seção e o conteúdo */
+        }
+                            
+        .quem-somos h3 {
+            font-family: 'inter', sans-serif;
+            font-size: 3em;
+            color: #da9970;
+            line-height: 2;
+            margin-bottom: 10px; /* Pequeno espaço abaixo do título */
+            text-shadow: 0 0 10px #271002;
+        }
+                            
+        .quem-somos p {
+            font-family: 'inter', sans-serif;
+            font-size: 1.5em;
+            color: #f3e3d3;
+            line-height: 2;
+            margin-bottom: 15px;
+            padding-top: 5em; /* Espaçamento acima do texto */
+                                
+        }
+                            
+        .gif {
+            float: left;
+            margin-right: 20px;
+            border-radius: 100px;
+            padding: 20px;
+            padding-bottom: 50px;
+        }
+                    
+                    /* Media query para dispositivos menores */
+                    @media  (max-width: 768px) {
+
+            .gif {
+                width: 90%; /* Define o tamanho do gif para 100% da tela*/
+                max-height:90%; 
+            }
+                        
+            .quem-somos p {
+                padding: 10px;
+                font-size: 1.2rem;
+                            
+            }
+        }
+
+                            
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+                    
+                    
+                                /*RODAPÉ DA PAGINA */
+        footer {
+            background-color: #380d15;                       
+            color: #f3e3d3;                      
+            text-align: center;
+            display: flex;
+            justify-content: space-between; /* Distribui os elementos igualmente no espaço disponível */
+            align-items: center; /* Centraliza verticalmente os elementos */                        
+        }
+                                
+        .logo-rodape {
+            max-width: 70px;
+            height: auto;                       
+            order: 1; /* Define a ordem dos elementos */                        
+        }                                           
+                                
+        .contato {
+            margin-left: auto;
+            order: 3; /* Define a ordem dos elementos */
+        }
+                                
+        .contato img {
+            width: 10%;
+            height: auto;
+        }
+                                
+                            
+                                
+        .copy {
+            font-family: 'Sarala';
+            margin-top: 10px;
+            text-align: center;
+            color: #704a51;
+            padding-bottom: 1rem;
+            font-size: 0.8rem;
+            text-align: center;                      
+        }
+                                
+        .contatenos {
+            font-family: 'inter' , sans-serif;
+            padding: 10px;
+        }
+                                
+        /* Media query para dispositivos menores */
+        @media  (max-width: 768px) {
+        footer {
+                background-color: #380d15;
+                color: #f3e3d3;
+                padding: 0px;
+                
+        }
+            
+        .logo-rodape {
+                max-width: 40%;
+                height: auto;
+                align-content: left;
+        }
+            
+
+        .contato img {
+                width: 20%;
+                height: auto;
+        }
+            
+            .contatenos {
+            font-family: 'inter' , sans-serif;
+            padding: auto;
+        }
+        .footer-img {
+            width: 100%;
+            padding: 1rem;
+        }
+        .copy {
+            font-family: 'Sarala';
+            font-size: 0.4rem;
+            margin-top: 10px;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        } 
