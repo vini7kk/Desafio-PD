@@ -39,4 +39,3 @@ function slider() {
 
 // Chama a função slider a cada 3 segundos para criar o efeito de loop
 setInterval(slider, 3000);
-
